@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  env:
+    build: .
+    volumes:
+      - ~/.aws:/root/.aws
+      - ${PWD}:/work
+      - ~/.zsh_history:/root/.bash_history
+    tty: true
+    stdin_open: true
+    command: bash
